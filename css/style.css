@@ -1,0 +1,393 @@
+/* Importa a fonte Poppins do Google Fonts com diferentes pesos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset básico para todos os elementos */
+* {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+  box-sizing: border-box; /* Inclui bordas e padding no cálculo da largura e altura */
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+  font-family: "Poppins", sans-serif; /* Define a fonte padrão */
+  color: #292524; /* Cor do texto principal */
+  display: flex; /* Usa Flexbox para o layout */
+  min-height: 100vh; /* Altura total da viewport */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start; /* Alinha os itens no topo */
+  background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
+  background-position: 1000%; /* Ajusta a posição da imagem de fundo */
+  background-color: white; /* Cor de fundo branca */
+
+}
+
+/* Estilos para as seções */
+section {
+  display: inline; /* Define a seção como inline */
+}
+
+/* Estilos específicos para a seção de imagem do formulário */
+section.img_formulario {
+  display: flex; /* Define a seção como inline */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  height: 720px; /* Altura da seção */
+  width: 35%; /* Largura da seção */
+  background-color: #2135A6; /* Cor de fundo azul */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+section.img_formulario img {
+  max-width: 100%; /* Define a largura máxima da imagem como 100% */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Garante que a imagem se ajuste ao contêiner */
+}
+
+.imglogo {
+  margin-left: 10px; /* Adiciona margem à esquerda */
+}
+
+/* Estilos para links */
+a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: #57534e; /* Cor do texto dos links */
+  margin-left: 12px; /* Margem à esquerda */
+}
+
+/* Estilos para títulos h1 */
+h1 {
+  margin-left: 12px; /* Margem à esquerda */
+}
+
+/* Estilos para títulos h2 */
+h2 {
+  margin-left: 12px; /* Margem à esquerda */
+}
+
+/* Estilos para parágrafos */
+p {
+  margin-left: 12px; /* Margem à esquerda */
+}
+
+/* Estilos para o contêiner de login */
+.secao_login {
+  margin: auto; /* Centraliza o contêiner */
+}
+
+/* Estilos para o cabeçalho do formulário */
+.secao_formulario__cabecalho {
+  padding-top: 24px; /* Adiciona espaço no topo */
+}
+
+/* Estilos para o parágrafo do cabeçalho */
+.secao_formulario__paragrafo {
+  padding-top: 12px; /* Adiciona espaço no topo */
+  color: #57534e; /* Cor do texto */
+}
+
+/* Estilos para o título principal */
+.secao_formulario__h1 {
+  padding-top: 12px; /* Adiciona espaço no topo */
+}
+
+/* Estilos para o subtítulo */
+.secao_formulario__h2 {
+  padding-top: 12px; /* Adiciona espaço no topo */
+  font-size: medium; /* Tamanho da fonte */
+}
+
+/* Estilos para os contêineres de input */
+.div_input {
+  display: flex; /* Usa Flexbox para o layout */
+  flex-direction: column; /* Organiza o label acima do input */
+  max-width: 832px; /* Largura máxima */
+}
+
+/* Estilos para o placeholder (texto dentro dos inputs) */
+.placeholder {
+  text-transform: uppercase; /* Converte o texto para maiúsculas */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilos para labels */
+label {
+  color: #57534e; /* Cor do texto */
+  padding-top: 12px; /* Adiciona espaço no topo */
+  border-radius: 10px; /* Bordas arredondadas */
+  display: inline-block; /* Faz o label ocupar apenas o espaço necessário */
+  font-size: smaller; /* Tamanho da fonte menor */
+  margin-left: 12px; /* Margem à esquerda */
+}
+
+/* Estilos para inputs em geral */
+input {
+  width: 832px; /* Largura do input */
+  margin-left: 10px; /* Margem à esquerda */
+  margin-right: 10px; /* Margem à direita */
+  height: 36px; /* Altura do input */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 5px; /* Espaçamento interno */
+  border: 1px solid gray; /* Borda cinza */
+}
+
+/* Estilos para a seleção de texto dentro dos inputs */
+input::selection {
+  background-color: #E43A12; /* Cor de fundo da seleção (laranja) */
+  color: white; /* Cor do texto selecionado (branco) */
+}
+
+/* Estilos para a seleção de texto em toda a página */
+::selection {
+  background-color: #E43A12; /* Cor de fundo da seleção (laranja) */
+  color: white; /* Cor do texto selecionado (branco) */
+}
+
+/* Estilos específicos para input do tipo date */
+input[type="date"] {
+  color: gray; /* Cor do texto */
+  text-transform: uppercase; /* Converte o texto para maiúsculas */
+}
+
+/* Estilos para o elemento select */
+select {
+  width: 832px; /* Largura do select */
+  margin-left: 10px; /* Margem à esquerda */
+  margin-right: 10px; /* Margem à direita */
+  height: 36px; /* Altura do select */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 5px; /* Espaçamento interno */
+  border: 1px solid gray; /* Borda cinza */
+}
+
+/* Estilos para input do tipo file */
+input[type="file"] {
+  height: 220px; /* Altura maior para o input de arquivo */
+  border: 2px dashed #ccc; /* Borda pontilhada */
+  text-align: center; /* Centraliza o texto */
+  display: none; /* Esconde o input original */
+}
+
+/* Contêiner principal para o input de arquivo personalizado */
+.file-input-container {
+  display: flex; /* Usa Flexbox para o layout */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  gap: 10px; /* Espaçamento entre os elementos */
+}
+
+/* Esconde o input original do tipo file */
+input[type="file"] {
+  display: none;
+}
+
+/* Estilo do label personalizado para o input de arquivo */
+.custom-file-input {
+  display: flex; /* Usa Flexbox para o layout */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  padding: 20px; /* Espaçamento interno */
+  border: 2px dashed #ccc; /* Borda pontilhada */
+  border-radius: 10px; /* Bordas arredondadas */
+  background-color: #f9f9f9; /* Cor de fundo */
+  cursor: pointer; /* Muda o cursor para pointer */
+  text-align: center; /* Centraliza o texto */
+  transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Efeito hover para o label personalizado */
+.custom-file-input:hover {
+  background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo da imagem dentro do label personalizado */
+.upload-icon {
+  width: 50px; /* Largura da imagem */
+  height: 50px; /* Altura da imagem */
+  margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estilo do texto que mostra o nome do arquivo */
+.file-name {
+  margin-top: 10px; /* Margem superior */
+  font-size: 14px; /* Tamanho da fonte */
+  color: #555; /* Cor do texto */
+}
+
+/* Estilos para o contêiner dos botões */
+.botoes {
+  display: flex; /* Usa Flexbox para o layout */
+  justify-content: flex-end; /* Alinha os botões à direita */
+  gap: 10px; /* Espaçamento entre os botões */
+  font-family: "Poppins", sans-serif; /* Define a fonte */
+  padding-right: 12px; /* Adiciona padding à direita */
+}
+
+/* Estilos para o botão de cancelar */
+button.cancelar {
+  border-radius: 5px; /* Bordas arredondadas */
+  color: #E43A12; /* Cor do texto */
+  background-color: white; /* Cor de fundo */
+  border: 1px solid #E43A12; /* Borda com cor específica */
+  width: 120px; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  cursor: pointer; /* Muda o cursor para pointer */
+  font-size: medium; /* Tamanho da fonte */
+}
+
+/* Estilos para o botão de enviar */
+button.enviar {
+  border-radius: 5px; /* Bordas arredondadas */
+  color: white; /* Cor do texto */
+  background-color: #E43A12; /* Cor de fundo */
+  width: 160px; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor para pointer */
+  font-size: medium; /* Tamanho da fonte */
+}
+
+/* Estilos para links de termos e condições */
+.termosecondicoes {
+  color: #E43A12; /* Cor do texto */
+}
+
+/* Estilos para inputs do tipo checkbox */
+input[type="checkbox"] {
+  height: 20px; /* Altura do checkbox */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-align: right; /* Alinha o texto à direita */
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove padding */
+  width: 5%; /* Largura do checkbox */
+}
+
+/* Estilos para o contêiner dos termos e condições */
+.checkbox_termos {
+  display: flex; /* Usa Flexbox para o layout */
+  text-align: justify; /* Justifica o texto */
+  align-items: left; /* Alinha os itens à esquerda */
+  padding-top: 48px; /* Espaçamento no topo */
+  padding-bottom: 48px; /* Espaçamento na base */
+  font-size: larger; /* Tamanho da fonte maior */
+}
+
+/* Estilos para o contêiner das opções de trilhas */
+.opcoes_trilhas {
+  display: flex; /* Usa Flexbox para o layout */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  gap: 10px; /* Espaçamento entre os itens */
+  max-width: 832px; /* Largura máxima */
+  min-width: none; /* Remove a largura mínima */
+  padding-left: 12px; /* Espaçamento à esquerda */
+}
+
+/* Estilos para as labels das opções de trilhas */
+.opcoes_trilhas label {
+  display: flex; /* Usa Flexbox para o layout */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  border: 1px solid #ccc; /* Borda cinza */
+  width: 49%; /* Largura das labels */
+  padding: 10px; /* Espaçamento interno */
+  position: relative; /* Permite posicionar elementos filhos absolutamente */
+  margin: 0; /* Remove margens */
+}
+
+/* Estilos para os radio buttons das opções de trilhas */
+.opcoes_trilhas input[type="radio"] {
+  position: absolute; /* Posiciona o radio button absolutamente */
+  top: 10px; /* Distância do topo */
+  left: 10px; /* Distância da esquerda */
+  width: 20px; /* Largura do radio button */
+  height: 20px; /* Altura do radio button */
+  margin: 0; /* Remove margens */
+}
+
+/* Estilos para as imagens das opções de trilhas */
+.opcoes_trilhas img {
+  width: 80px; /* Largura da imagem */
+}
+
+/* Estilos para o texto das opções de trilhas */
+.opcoes_trilhas p {
+  margin: 0; /* Remove margens */
+  font-size: medium; /* Tamanho da fonte */
+}
+
+/* Estilos para a imagem do logo */
+img.imglogo {
+  width: 720px; /* Largura da imagem */
+  width: 500px; /* Largura da imagem (sobrescrita) */
+}
+
+/* Ajusta a largura do formulário e impede a sobreposição */
+@media screen and (max-width: 1024px) {
+  section.img_formulario {
+    width: 100%; /* Largura total da seção de imagem do formulário */
+    display: flex; /* Utiliza Flexbox para o layout */
+    flex-direction: column; /* Organiza os elementos na direção da coluna */
+    align-items: center; /* Alinha os itens no centro */
+  }
+
+  input, select, textarea {
+    width: 90%; /* Mantém um tamanho proporcional */
+    max-width: 600px; /* Define um limite máximo de largura */
+  }
+
+  /* Evita que o conteúdo se sobreponha */
+  .lado-direito {
+    position: relative; /* Define o posicionamento relativo */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
+    flex-basis: 50%; /* Mantém a imagem proporcional */
+  }
+}
+
+/* Para telas menores que 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Mantém os elementos empilhados */
+    align-items: center; /* Alinha os itens no centro */
+  }
+
+  .lado-direito {
+    width: 100%; /* A largura da imagem ocupa 100% da tela */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .botoes {
+    flex-direction: column; /* Organiza os botões na direção da coluna */
+    width: 100%; /* Largura total dos botões */
+    text-align: center; /* Alinha o texto dos botões no centro */
+  }
+
+  button {
+    width: 90%; /* Botões ocupam 90% da largura da tela */
+  }
+}
+
+/* Para telas menores que 480px */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px; /* Adiciona padding ao corpo */
+  }
+
+  section.img_formulario {
+    width: 100%; /* Faz a seção ocupar toda a largura */
+    padding: 15px; /* Adiciona padding interno */
+  }
+
+  input, select {
+    max-width: 100%; /* Define a largura máxima dos inputs como 100% */
+  }
+
+  .botoes {
+    flex-direction: column; /* Organiza os botões na direção da coluna */
+    align-items: center; /* Centraliza os botões */
+  }
+
+  button {
+    width: 100%; /* Faz os botões ocuparem toda a largura */
+  }
+}

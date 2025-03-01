@@ -1,0 +1,139 @@
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total do elemento */
+}
+
+body {
+    font-family: "Poppins", sans-serif; /* Define a fonte padrão */
+    color: #292524; /* Define a cor do texto */
+    display: flex; /* Organiza os elementos em linha ou coluna */
+    height: 100vh; /* Altura utilizando 100% da janela */
+    justify-content: center; /* Alinha os elementos na horizontal */
+    align-items: center; /* Alinha os elementos na vertical */
+    padding: 20px; /* Adiciona um padding ao redor do corpo */
+    background: linear-gradient(to right, #E7E5E4, #F67841); /* Fundo com gradiente */
+}
+
+h1 {
+    font-size: 32px; /* Tamanho da fonte para o título */
+    line-height: 120%; /* Altura da linha para melhor espaçamento */
+    font-weight: bold; /* Define o texto como negrito */
+}
+
+.barra {
+    background-color: #e43a12; /* Cor de fundo da barra */
+    height: 5px; /* Altura da barra */
+    width: 100%; /* Largura dinâmica */
+    max-width: 210px; /* Largura máxima da barra */
+    border-radius: 30px; /* Bordas arredondadas */
+}
+
+.input-usuario {
+    display: flex; /* Organiza os elementos em linha ou coluna */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    gap: 5px; /* Distância entre os itens */
+}
+
+.titulo-login {
+    display: flex; /* Organiza os elementos em linha ou coluna */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    gap: 5px; /* Distância entre os itens */
+}
+
+.botao {
+    padding: 20px; /* Espaçamento interno */
+    align-self: center; /* Centraliza o botão */
+    width: 150px; /* Largura fixa */
+    background-image: linear-gradient(#256a8a, #2135a6); /* Fundo com gradiente */
+    border-radius: 40px; /* Bordas arredondadas */
+    border: solid 1px #256a8a; /* Borda sólida */
+    font-size: 20px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+input {
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid #d6d3d1; /* Borda sólida */
+}
+
+form {
+    background-color: white; /* Cor de fundo do formulário */
+    padding: 5vw; /* Espaçamento interno proporcional à largura da viewport */
+    border-radius: 40px; /* Bordas arredondadas */
+    display: flex; /* Organiza os elementos em linha ou coluna */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    gap: 5px; /* Distância entre os itens */
+    max-width: 500px; /* Largura máxima do formulário */
+    width: 90%; /* Largura total */
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 4vw; /* Reduz o padding em telas menores */
+        width: 95%; /* Aumenta a largura do formulário */
+    }
+
+    .botao {
+        width: 100%; /* Faz o botão ocupar toda a largura */
+        padding: 12px; /* Reduz o padding do botão */
+    }
+
+    .imagem img {
+        width: 80%; /* Reduz a largura da imagem */
+    }
+
+    .barra {
+        max-width: 180px; /* Reduz a largura máxima da barra */
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 3vw; /* Reduz ainda mais o padding */
+        width: 100%; /* Faz o formulário ocupar toda a largura */
+    }
+
+    h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .botao {
+        font-size: 16px; /* Reduz o tamanho da fonte do botão */
+    }
+
+    .barra {
+        max-width: 150px; /* Reduz ainda mais a largura máxima da barra */
+    }
+}
+
+.imagem img {
+    max-width: 100%; /* Garante que a imagem seja responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços extras abaixo da imagem */
+}
+
+input {
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid #d6d3d1; /* Borda sólida */
+    width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+}
+
+.senha-usuario {
+    display: flex; /* Organiza os elementos em linha ou coluna */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 5px; /* Distância entre os itens */
+}
+
+.senha-usuario input[type="checkbox"] {
+    width: 16px; /* Largura do checkbox */
+    height: 16px; /* Altura do checkbox */
+    cursor: pointer; /* Altera o cursor para pointer ao passar o mouse */
+}
+
+.senha-usuario p {
+    margin: 0px; /* Remove a margem padrão */
+    font-size: 12px; /* Tamanho da fonte */
+}

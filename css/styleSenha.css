@@ -1,0 +1,131 @@
+* {
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total do elemento */
+  }
+  
+  body {
+      font-family: "Poppins", sans-serif; /* Define a fonte padrão */
+      color: #292524; /* Define a cor do texto */
+      display: flex; /* Organiza os elementos em linhas ou colunas */
+      height: 100vh; /* Altura utilizando 100% da janela */
+      justify-content: center; /* Alinha os elementos na horizontal */
+      align-items: center; /* Alinha os elementos na vertical */
+      background: linear-gradient(to right, #E7E5E4, #F67841); /* Fundo com gradiente */
+      padding: 20px; /* Adiciona um padding ao redor do corpo */
+  }
+  
+  h1 {
+      font-size: 32px; /* Tamanho da fonte para o título */
+      line-height: 120%; /* Altura da linha para melhor espaçamento */
+      font-weight: bold; /* Define o texto como negrito */
+  }
+  
+  p {
+      font-size: 12px; /* Tamanho da fonte para parágrafos */
+  }
+  
+  .titulo-redefinir {
+      display: flex; /* Organiza os elementos em linha ou coluna */
+      flex-direction: column; /* Define a direção dos itens como coluna */
+      gap: 5px; /* Distância entre os itens */
+  }
+  
+  .efeito-pag {
+      background-color: #e43a12; /* Cor de fundo da barra */
+      height: 7px; /* Altura da barra */
+      width: 250px; /* Largura da barra */
+      border-radius: 30px; /* Bordas arredondadas */
+  }
+  
+  .input-user {
+      display: flex; /* Organiza os elementos em linha ou coluna */
+      flex-direction: column; /* Define a direção dos itens como coluna */
+      gap: 5px; /* Distância entre os itens */
+      font-size: 15px; /* Tamanho da fonte */
+  }
+  
+  .botao-redefinir {
+      padding: 10px; /* Cria espaço entre o texto e as bordas */
+      border-radius: 20px; /* Bordas arredondadas */
+      align-self: center; /* Centraliza o botão */
+      font-size: 17px; /* Tamanho da fonte */
+      width: 200px; /* Define a largura fixa */
+      height: 50px; /* Define a altura fixa */
+      background: linear-gradient(#256a8a, #2135a6); /* Fundo com gradiente */
+      border: solid 1px #256a8a; /* Borda sólida */
+      color: white; /* Cor do texto */
+      cursor: pointer; /* Altera o cursor para pointer ao passar o mouse */
+  }
+  
+  input {
+      padding: 10px; /* Espaçamento interno */
+      width: 100%; /* Largura total */
+      height: 50px; /* Altura fixa */
+      border-radius: 40px; /* Bordas arredondadas */
+      border: 1px solid #d6d3d1; /* Borda sólida */
+      font-size: 16px; /* Tamanho da fonte */
+  }
+  
+  form {
+      background-color: #fff; /* Cor de fundo do formulário */
+      padding: 60px; /* Espaçamento interno */
+      border-radius: 30px; /* Bordas arredondadas */
+      display: flex; /* Organiza os elementos em linha ou coluna */
+      flex-direction: column; /* Define a direção dos itens como coluna */
+      gap: 10px; /* Distância entre os itens */
+      font-size: 20px; /* Tamanho da fonte */
+      max-width: 450px; /* Largura máxima do formulário */
+      width: 100%; /* Largura total */
+  }
+  
+  .dados {
+      text-align: center; /* Centraliza o conteúdo */
+      margin-bottom: 20px; /* Espaçamento abaixo do conteúdo */
+  }
+  
+  .dados img {
+      max-width: 100%; /* Garante que a imagem seja responsiva */
+      height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 768px) {
+      body {
+          padding: 10px; /* Reduz o padding em telas menores */
+      }
+  
+      form {
+          padding: 15px; /* Reduz o padding do formulário */
+          font-size: 18px; /* Reduz o tamanho da fonte */
+      }
+  
+      .input-user input {
+          height: 45px; /* Reduz a altura do input */
+          font-size: 14px; /* Reduz o tamanho da fonte */
+      }
+  
+      .botao-redefinir {
+          width: 180px; /* Reduz a largura do botão */
+          height: 45px; /* Reduz a altura do botão */
+          font-size: 16px; /* Reduz o tamanho da fonte */
+      }
+  }
+  
+  @media (max-width: 480px) {
+      form {
+          padding: 10px; /* Reduz ainda mais o padding do formulário */
+          font-size: 16px; /* Reduz o tamanho da fonte */
+      }
+  
+      .input-user input {
+          height: 40px; /* Reduz a altura do input */
+          font-size: 14px; /* Reduz o tamanho da fonte */
+      }
+  
+      .botao-redefinir {
+          width: 160px; /* Reduz a largura do botão */
+          height: 40px; /* Reduz a altura do botão */
+          font-size: 14px; /* Reduz o tamanho da fonte */
+      }
+  }

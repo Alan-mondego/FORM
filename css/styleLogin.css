@@ -137,3 +137,19 @@ input {
     margin: 0px; /* Remove a margem padrão */
     font-size: 12px; /* Tamanho da fonte */
 }
+
+.span_required{
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.span_senha{
+
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+
+}

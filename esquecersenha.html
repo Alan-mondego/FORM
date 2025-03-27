@@ -18,13 +18,14 @@
         <div class="efeito-pag"></div>
       </div>
       <div class="input-user">
-        <label for="">Email</label>
+        <label for="email_usu">Email</label>
         <input
           type="email"
-          id="email-usario"
+          id="email_usu"
           placeholder="Digite seu email"
-          required
-        />
+          oninput="validacaoEmail()" />
+
+        <span class="span_required">E-mail inválido!</span>
       </div>
 
       <button class="botao-redefinir">Redefinir</button>
@@ -33,11 +34,16 @@
         Ainda não tem conta?
         <a href="formulario.html">Clique aqui</a>
       </p>
-      <p>     
-        <a href="index.html">Voltar ao Login</a>
+      <p> 
+        Voltar ao login    
+        <a href="index.html">Clique aqui</a>
       </p>
     
     </form>
-    <script src="js/app.js" ></script>
-  </body>
+
+    <script src="js/app.js"></script>
+</body>
+
+
+
 </html>

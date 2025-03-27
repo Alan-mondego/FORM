@@ -129,3 +129,9 @@
           font-size: 14px; /* Reduz o tamanho da fonte */
       }
   }
+  .span_required{
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}

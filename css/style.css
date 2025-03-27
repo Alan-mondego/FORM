@@ -321,6 +321,11 @@ img.imglogo {
   width: 720px; /* Largura da imagem */
   width: 500px; /* Largura da imagem (sobrescrita) */
 }
+#instrucoesSenha {
+  font-size: 0.8em;/* Define o tamanho da fonte como 80% do tamanho padrão */
+  color: #57534e;
+}
+
 
 /* Ajusta a largura do formulário e impede a sobreposição */
 @media screen and (max-width: 1024px) {
@@ -365,6 +370,18 @@ img.imglogo {
   button {
     width: 90%; /* Botões ocupam 90% da largura da tela */
   }
+  .senha-usuario {
+    padding: 1px;
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    font-size: 12px;
+}
+
+.senha-usuario input {
+    margin-right: -15px; 
+
+}
 }
 
 /* Para telas menores que 480px */
@@ -390,4 +407,40 @@ img.imglogo {
   button {
     width: 100%; /* Faz os botões ocuparem toda a largura */
   }
+  .senha-usuario {
+    padding: 1px;
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    font-size: 12px;
 }
+
+.senha-usuario input {
+    margin-right: -15px; 
+
+}
+}
+
+.span_senha{
+
+    display: none;
+    color: red;
+    font-size: 1rem;
+    margin-top: 4px;
+    font-size: 12px;
+    padding: 0% 2%;
+}
+.senha-usuario {
+    padding: 1px;
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    font-size: 12px;
+}
+
+.senha-usuario input {
+    margin-right: -15px; 
+
+}
+
+

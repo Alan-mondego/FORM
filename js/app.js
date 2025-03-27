@@ -215,13 +215,12 @@ function validacaoEndereco(){
     
     
 
-// Adiciona a formatação automática ao campo de telefone ao digitar
 document.getElementById("telefone").addEventListener("input", function (event) {
-    let numero = event.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+    let numero = event.target.value.replace(/\D/g, ""); 
 
-    if (numero.length > 11) numero = numero.slice(0, 11); // Limita a 11 dígitos
+    if (numero.length > 11) numero = numero.slice(0, 11); 
 
-    // Formatação dinâmica: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
+    
     if (numero.length >= 2) {
         numero = `(${numero.slice(0, 2)}) ${numero.slice(2)}`;
     }
@@ -229,18 +228,17 @@ document.getElementById("telefone").addEventListener("input", function (event) {
         numero = `${numero.slice(0, 10)}-${numero.slice(10)}`;
     }
 
-    event.target.value = numero; // Atualiza o campo com a formatação correta
+    event.target.value = numero; 
 });
 
-// Função para validar o número de telefone
 function validacaoNumero() {
     const numeroInput = document.getElementById('telefone');
     const spanNumero = document.querySelector('.span_numero');
-    const regexCelular = /^\([1-9]{2}\) (?:[2-8]|9[0-9])[0-9]{3}-[0-9]{4}$/; // Regex corrigido
+    const regexCelular = /^\([1-9]{2}\) (?:[2-8]|9[0-9])[0-9]{3}-[0-9]{4}$/; 
 
     function errorCelular() {
         numeroInput.style.border = "2px solid #FF0000";
-        if (spanNumero) spanNumero.style.display = "block"; // Verifica se o span existe antes de alterar
+        if (spanNumero) spanNumero.style.display = "block"; 
     }
 
     function removeErrorCelular() {
@@ -255,9 +253,9 @@ function validacaoNumero() {
 
     if (!regexCelular.test(numeroInput.value)) {
         errorCelular();
-        return false; // Retorna falso se o número for inválido
+        return false;
     } else {
         removeErrorCelular();
-        return true; // Retorna verdadeiro se o número for válido
+        return true; 
     }
 }

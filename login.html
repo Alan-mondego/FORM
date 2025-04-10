@@ -4,42 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Tela Candidato</title>
+  <link rel="stylesheet" href="css/styleUsu.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <div class="imagem"><img src="img/pagina.png" alt="menino" /></div>
-  <form action="">
-    <div class="titulo-login">
-      <h1>Área de Login</h1>
-      <div class="barra"></div>
-    </div>
-    <div class="input-usuario">
-      <label for="">Usuário</label>
-      <input type="text" id="usuario" />
-    </div>
-    <div class="input-usuario">
-      <label for="">Senha</label>
-      <input type="password" id="senha" />
-    </div>
+   <header class="cabecalho">
+     <nav class="cabecalho__link">
+        <a href="index.html" class="cabecalho__link__menu">Sair</a>
+     </nav>
+   </header>
 
-    <div class="senha-usuario">
-      <input type="checkbox" oninput="mostraSenha()" />
-      <p>Mostrar senha</p>
+    <div class="centraliza"><
+     <div class="dados_usuario">
+        <h1 class="titulo_usuario">Seus Dados</h1>
+      <p id="nome">Nome:</p>
+      <p id="data_nascimento">Data de nascimento:</p>
+      <p id="cpf">CPF:</p>
+      <p id="sexo">Sexo:</p>
+      <p id="telefone">Telefone:</p>
+      <p id="cep">CEP:</p>
+      <p id="numeroCasa">Número Casa:</p>
+      <p id="rua">Rua:</p>
+      <p id="bairro">Bairro:</p>
+      <p id="cidade">Cidade:</p>
+      <p id="uf">UF:</p>
+      <p id="trilhas">Trilhas:</p>
+     </div>
     </div>
+    <footer>
+        <p class="rodape">Desenvolvido por ©ALan e  ©Angelo</p>
+    </footer>
+    </body>
 
-    <button class="botao">Logar</button>
+    <script src="js/telausu.js"></script>
 
-    <p>
-      Esqueceu sua senha ?
-      <a href="esquecersenha.html">Clique aqui</a>
-    </p>
-    <p>
-      Ainda não tem conta?
-      <a href="formulario.html">Clique aqui</a>
-    </p>
-  </form>
-</body>
 </html>

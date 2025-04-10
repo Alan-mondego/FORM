@@ -18,20 +18,39 @@ function validarLetras(input) {
         mensagemErro.style.display = 'none';
     }
 }
-
 function validarDataNascimento(input) {
     const mensagemErro = document.getElementById('mensagemErroData');
     const dataSelecionada = new Date(input.value); 
     const dataAtual = new Date();
-    const dataMinima = new Date();
 
-    dataMinima.setFullYear(dataAtual.getFullYear() - 14);
+    let idade = dataAtual.getFullYear() - dataSelecionada.getFullYear();
+    const mesAtual = dataAtual.getMonth();
+    const diaAtual = dataAtual.getDate();
+    
 
-    if (dataSelecionada > dataAtual || dataSelecionada < dataMinima) {
-        mensagemErro.style.display = 'inline'; 
-        input.value = ''; 
+    if (mesAtual < dataSelecionada.getMonth() || 
+        (mesAtual === dataSelecionada.getMonth() && diaAtual < dataSelecionada.getDate())) {
+        idade--; /// Garante que o usuario já tenha feito aniversário
+    }
+    
+
+    if (dataSelecionada > dataAtual) {
+  
+        mensagemErro.textContent = "Data não pode ser no futuro";
+        mensagemErro.style.display = 'inline';
+        input.value = '';
+    } else if (idade < 16) {
+
+        mensagemErro.textContent = "Você deve ter pelo menos 16 anos";
+        mensagemErro.style.display = 'inline';
+
+    }else if(idade > 100){
+        mensagemErro.textContent = "Você não esta apto para inscrição";
+        mensagemErro.style.display = 'inline';
+    } else {
+  
         mensagemErro.style.display = 'none';
-}
+    }
 }
 
 function formatarCPF(input) {
@@ -51,10 +70,10 @@ function formatarCPF(input) {
     input.value = valor.substring(0, 14);
 }
 
-function validaCPF(cpf) {
+function validarCPF(cpf) {
     const cpfInput = document.getElementById('cpf');
 
-    console.log(cpfInput);
+ 
 
     var Soma = 0
     var Resto
@@ -143,7 +162,7 @@ function validarSenha(){
 
 const form = document.getElementById('form');
 const senhaInput = document.getElementById('senha');
-const span = document.querySelector('.span_senha'); // Alterado para pegar apenas o primeiro span
+const span = document.querySelector('.span_senha'); 
 const regexSenha = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#.]).{8,}$/;
 
 function errorSenha() {
@@ -163,8 +182,11 @@ if(senhaInput.value.trim()===''){
 
     if (!regexSenha.test(senhaInput.value)) {
         errorSenha();
+        
+        return false
     } else {
         removerErroSenha();
+        return true
     }
 
 }
@@ -213,28 +235,32 @@ function validacaoEndereco(){
     
     }
     
+   
     
 
-document.getElementById("telefone").addEventListener("input", function (event) {
-    let numero = event.target.value.replace(/\D/g, ""); 
 
-    if (numero.length > 11) numero = numero.slice(0, 11); 
-
-    
-    if (numero.length >= 2) {
-        numero = `(${numero.slice(0, 2)}) ${numero.slice(2)}`;
-    }
-    if (numero.length >= 10) {
-        numero = `${numero.slice(0, 10)}-${numero.slice(10)}`;
-    }
-
-    event.target.value = numero; 
-});
 
 function validacaoNumero() {
     const numeroInput = document.getElementById('telefone');
     const spanNumero = document.querySelector('.span_numero');
     const regexCelular = /^\([1-9]{2}\) (?:[2-8]|9[0-9])[0-9]{3}-[0-9]{4}$/; 
+
+
+    document.getElementById("telefone").addEventListener("input", function (event) {
+        let numero = event.target.value.replace(/\D/g, ""); 
+    
+        if (numero.length > 11) numero = numero.slice(0, 11); 
+    
+        
+        if (numero.length >= 2) {
+            numero = `(${numero.slice(0, 2)}) ${numero.slice(2)}`;
+        }
+        if (numero.length >= 10) {
+            numero = `${numero.slice(0, 10)}-${numero.slice(10)}`;
+        }
+    
+        event.target.value = numero; 
+    });
 
     function errorCelular() {
         numeroInput.style.border = "2px solid #FF0000";
@@ -258,4 +284,17 @@ function validacaoNumero() {
         removeErrorCelular();
         return true; 
     }
+}
+
+function verificarEnvioComprovante() {
+    const inputArquivo = document.getElementById('comprovante');
+    const mensagem = document.querySelector('.file-name');
+
+    inputArquivo.addEventListener('change', function () {
+        if (inputArquivo.files.length > 0) {
+            mensagem.textContent = 'Arquivo anexado: ' + inputArquivo.files[0].name;
+        } else {
+            mensagem.textContent = 'Nenhum arquivo selecionado';
+        }
+    });
 }

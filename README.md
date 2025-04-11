@@ -56,8 +56,7 @@ Cidadãos maranhenses com idade entre 16 e 99 anos interessados em capacitação
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40"/> 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40"/>
-<img src="https://raw.githubusercontent.com/prisma/docs/main/docs/static/favicon.png" alt="Prisma" width="40"/>
-
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/prisma/prisma-original.svg" alt="Prisma" width="40"/>
 
 ---
 

@@ -12,7 +12,6 @@ Sistema web para gerenciamento de inscrições em programas de capacitação.
 - Validação da idade mínima (16 anos).
 - Backend funcional com Node.js e MongoDB.
 - Armazenamento seguro dos dados.
-- Envio de e-mail para confirmação de cadastro.  
 
 ---
 
@@ -28,15 +27,12 @@ Sistema web para gerenciamento de inscrições em programas de capacitação.
 
 ### Frontend
 - HTML, CSS, JavaScript  
-- [Chart.js](https://www.chartjs.org/) para gráficos
+
 
 ### Backend
 - Node.js com Express  
-- MongoDB como banco de dados  
-- Nodemailer (envio de e-mails)  
-- Bcrypt (criptografia de senha)  
-- JWT (autenticação por token – em breve)
-
+- MongoDB como banco de dados
+- Prisma
 ---
 
 ## 🧠 Fluxo Lógico
@@ -45,10 +41,8 @@ Sistema web para gerenciamento de inscrições em programas de capacitação.
 2. Redirecionamento para cadastro
 3. Preenchimento do formulário com validação
 4. Verificação de idade mínima (18 anos)
-5. Envio de e-mail de ativação
-6. Login após ativação
-7. Acesso ao painel com dados e gráficos
-8. Recuperação de senha se necessário
+5. Login após ativação
+
 
 ---
 
@@ -62,6 +56,7 @@ Cidadãos maranhenses com idade entre 16 e 99 anos interessados em capacitação
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40"/> 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40"/>
+<img src="https://raw.githubusercontent.com/prisma/docs/main/docs/static/favicon.png" alt="Prisma" width="40"/>
 
 
 ---
